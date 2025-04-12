@@ -50,7 +50,7 @@
 </head>
 
 <body>
-    <h2>Lista de Usuários</h2>
+    <h2>Alunos</h2>
 
     <div>
         @foreach ($users as $user)
@@ -67,6 +67,24 @@
             </div>
         @endforeach
     </div>
+
+<div style="margin: 20px 0; text-align: center;">
+    <a href="{{ route('profile.edit') }}" style="
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #333;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        margin-right: 10px;
+    ">Editar Perfil</a>
+
+    <form action="{{ route('logout') }}" method="POST" style="display: inline-block;">
+        @csrf
+        <button type="submit">Logout</button>
+    </form>
+</div>
+</body>
 
     <form action="{{ route('logout') }}" method="POST">
         @csrf

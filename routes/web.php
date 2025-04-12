@@ -19,4 +19,9 @@ Route::middleware(['auth'])->group(function () {
 
     // Rota de logout
     Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
+
+    // Adicione dentro do grupo de rotas protegidas por auth:
+
+    Route::get('/profile/edit', [UserController::class, 'edit'])->name('profile.edit');
+    Route::put('/profile/update', [UserController::class, 'update'])->name('profile.update');
 });

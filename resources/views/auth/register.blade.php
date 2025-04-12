@@ -163,4 +163,21 @@
 
 </body>
 
+<!-- Add this before closing </body> tag -->
+<script>
+    document.getElementById('celular').addEventListener('input', function (e) {
+        let value = e.target.value.replace(/\D/g, '');
+        
+        if (value.length <= 11) {
+            if (value.length > 2) {
+                value = '(' + value.substring(0,2) + ') ' + value.substring(2);
+            }
+            if (value.length > 9) {
+                value = value.substring(0,9) + '-' + value.substring(9);
+            }
+        }
+        
+        e.target.value = value;
+    });
+    </script>
 </html

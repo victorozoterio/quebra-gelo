@@ -1,66 +1,88 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Quebra Gelo
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+**by: QuantIT**
 
-## About Laravel
+## Descrição do Projeto
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Seja bem-vindo ao **Quebra Gelo**, o sistema que vai transformar sua experiência na FATEC Indaiatuba!
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+Sabemos que o início da vida universitária pode ser desafiador. Encontrar grupos de estudo, fazer amigos e se adaptar ao novo ambiente nem sempre é fácil. Por isso, criamos o Quebra Gelo, uma plataforma inovadora que te conecta com seus colegas desde o primeiro dia.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+Este sistema foi criado para ajudar novos alunos a se conectar desde o primeiro dia, facilitando a formação de grupos de estudo, amizades e uma rede de apoio essencial.
 
-## Learning Laravel
+## Funcionalidades Principais
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+* **Cadastro de Perfil Completo:** Compartilhe seus interesses, habilidades e objetivos acadêmicos.
+* **Conexão com Colegas:** Encontre estudantes com perfis semelhantes e forme grupos de estudo.
+* **Comunidade Acolhedora:** Quebre o gelo e construa uma rede de apoio na FATEC Indaiatuba.
+* **Integração com o SIGA:** Acesse suas informações acadêmicas de forma rápida e segura (utilizando RA e senha).
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+<h2 id="installation">⚙️ Installation</h2>
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+- 1: Create a `.env` file from the `.env.example` file;
+- 2: Fill in all the necessary variables in the `.env`;
+- 3: Install the dependencies, running the command: `composer install`;
+- 4: Run the migrations, running the command: `php artisan migrate`;
+- 5: Run the application, running the command: `php artisan serve`
 
-## Laravel Sponsors
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+## O Que Você Pode Fazer com o Quebra Gelo?
 
-### Premium Partners
+* Encontrar colegas com os mesmos interesses e objetivos.
+* Formar grupos de estudo para as disciplinas do seu curso.
+* Compartilhar seus pontos fortes e fracos para complementar seus estudos.
+* Construir uma rede de amigos e contatos profissionais.
+* Adaptar-se mais facilmente à vida universitária.
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+## Termo de Consentimento - LGPD
 
-## Contributing
+Ao cadastrar seu perfil no sistema "Quebra Gelo", você concorda com o tratamento dos seus dados pessoais para os seguintes fins:
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+* **Finalidade:** Os dados coletados serão utilizados exclusivamente para fins educacionais e para facilitar a interação entre os alunos da FATEC Indaiatuba, auxiliando na formação de grupos de estudo e na integração entre os calouros.
+* **Dados Coletados:** Os dados pessoais solicitados no cadastro incluem nome, e-mail, celular, RA, curso, semestre, participação em grupos, bio e informações sobre seus pontos fortes e fracos.
+* **Uso Exclusivo pela FATEC Indaiatuba:** Seus dados serão utilizados apenas pela FATEC Indaiatuba e não serão compartilhados com terceiros sem seu consentimento expresso, exceto em casos previstos por lei.
+* **Segurança dos Dados:** A QuantIT implementará medidas de segurança técnicas e administrativas adequadas para proteger seus dados pessoais contra acessos não autorizados, perda, alteração, divulgação ou destruição.
+* **Direitos do Titular:** Você tem o direito de acessar, retificar, atualizar, limitar o tratamento ou solicitar a exclusão de seus dados pessoais a qualquer momento, entrando em contato com a FATEC Indaiatuba através dos canais de comunicação disponibilizados.
+* **Consentimento:** Ao completar o cadastro, você declara estar ciente e de acordo com este termo de consentimento e autoriza a FATEC Indaiatuba a tratar seus dados pessoais conforme descrito acima.
 
-## Code of Conduct
+## Comece Sua Jornada com Amigos!
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+Entrar na faculdade pode ser desafiador quando não se conhece ninguém. Formar grupos, tirar dúvidas ou mesmo receber aquele apoio moral. Descubra como o Quebra Gelo pode transformar sua experiência acadêmica!
 
-## Security Vulnerabilities
+Junte-se a nós e faça parte de uma comunidade que te ajuda a alcançar seus objetivos acadêmicos!
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+**Quebre o gelo e comece sua jornada na FATEC Indaiatuba com o pé direito!**
 
-## License
+<h2 id="collaborators">🤝 Collaborators</h2>
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+<table>
+  <tr>
+    <td align="center">
+      <a href="https://github.com/victorozoterio">
+        <img src="https://avatars.githubusercontent.com/u/165734095?v=4" width="100px;" alt="Victor Ozoterio Profile Picture"/><br>
+        <sub>
+          <a href="https://github.com/victorozoterio">
+          Victor Ozoterio</a>
+        </sub>
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/Murilocampoos">
+        <img src="https://avatars.githubusercontent.com/u/95322404?v=4" width="100px;" alt="Murilo Campos Profile Picture"/><br>
+        <sub>
+          <a href="https://github.com/Murilocampoos">
+          Murilo Campos</a>
+        </sub>
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/PedroHDenny">
+        <img src="https://avatars.githubusercontent.com/u/130395012?v=4" width="100px;" alt="Pedro Denny Profile Picture"/><br>
+        <sub>
+          <a href="https://github.com/PedroHDenny">
+          Pedro Denny</a>
+        </sub>
+      </a>
+    </td>
+  </tr>
+</table>
