@@ -7,47 +7,71 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Quebra Gelo</title>
     <link rel="icon" href="{{ asset('favicon.ico') }}">
-    <link rel="stylesheet" href="{{ asset('css/login.css') }}">
+    <style>
+        /* Estilos para o fundo escuro */
+        body {
+            background-color: #121212;
+            color: white;
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        /* Estilos para os cards */
+        .user-card {
+            background-color: #333;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 15px;
+            width: 200px;
+            display: inline-block;
+            vertical-align: top;
+            text-align: center;
+        }
+
+        /* Estilo do botão de status */
+        .status-btn {
+            padding: 5px 15px;
+            border-radius: 5px;
+            color: white;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        /* Estilo para disponível (verde) */
+        .available {
+            background-color: green;
+        }
+
+        /* Estilo para indisponível (vermelho) */
+        .unavailable {
+            background-color: red;
+        }
+    </style>
 </head>
 
 <body>
-    <div class="container"> <!-- Adiciona a classe container para aplicar o estilo -->
-        <h2 style="text-align: center;">Login</h2>
+    <h2>Lista de Usuários</h2>
 
-        <form action="{{ route('login.authenticate') }}" method="POST">
-            @csrf
-            @method('POST')
-
-            <div class="form-group">
-                <label for="email">Email:</label>
-                <input type="email" name="email" id="email" placeholder="Digite seu E-mail"
-                    value="{{ old('email') }}">
+    <div>
+        @foreach ($users as $user)
+            <div class="user-card">
+                <h3>{{ $user->nome }}</h3>
+                <p>{{ $user->curso }}</p>
+                <p>{{ $user->celular }}</p>
+                <p>{{ $user->bio }}</p>
+                <p><strong>Pontos Fortes:</strong> {{ $user->pontos_fortes }}</p>
+                <p><strong>Pontos Fracos:</strong> {{ $user->pontos_fracos }}</p>
+                <button class="status-btn {{ $user->tem_grupo ? 'available' : 'unavailable' }}">
+                    {{ $user->tem_grupo ? 'Disponível' : 'Indisponível' }}
+                </button>
             </div>
-
-            <div class="form-group">
-                <label for="password">Senha:</label>
-                <input type="password" name="password" id="password" placeholder="Digite sua senha">
-            </div>
-
-            <button type="submit">Entrar</button>
-
-            @if (session('status'))
-                <p style="color: red;">
-                    {{ session('status') }}
-                </p>
-            @endif
-
-            @if ($errors->any())
-                @foreach ($errors->all() as $error)
-                    <p style="color: red;">
-                        {{ $error }}
-                    </p>
-                @endforeach
-            @endif
-        </form>
-
-        <p>Não tem uma conta? <a href="{{ route('register') }}">Cadastre-se</a></p>
+        @endforeach
     </div>
+
+    <form action="{{ route('logout') }}" method="POST">
+        @csrf
+        <button type="submit">Logout</button>
+    </form>
 </body>
 
 </html>
