@@ -7,42 +7,47 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Quebra Gelo</title>
     <link rel="icon" href="{{ asset('favicon.ico') }}">
+    <link rel="stylesheet" href="{{ asset('css/login.css') }}">
 </head>
 
 <body>
-    <h2>Lista de Usuários</h2>
+    <div class="container"> <!-- Adiciona a classe container para aplicar o estilo -->
+        <h2 style="text-align: center;">Login</h2>
 
-    <table border="1">
-        <thead>
-            <tr>
-                <th>Nome</th>
-                <th>Celular</th>
-                <th>Curso</th>
-                <th>Grupo</th>
-                <th>Bio</th>
-                <th>Pontos Fortes</th>
-                <th>Pontos Fracos</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach ($users as $user)
-                <tr>
-                    <td>{{ $user->nome }}</td>
-                    <td>{{ $user->celular }}</td>
-                    <td>{{ $user->curso }}</td>
-                    <td>{{ $user->tem_grupo ? 'Sim' : 'Não' }}</td>
-                    <td>{{ $user->bio }}</td>
-                    <td>{{ $user->pontos_fortes }}</td>
-                    <td>{{ $user->pontos_fracos }}</td>
-                </tr>
-            @endforeach
-        </tbody>
-    </table>
+        <form action="{{ route('login.authenticate') }}" method="POST">
+            @csrf
+            @method('POST')
 
-    <form action="{{ route('logout') }}" method="POST">
-        @csrf
-        <button type="submit">Logout</button>
-    </form>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email" placeholder="Digite seu E-mail"
+                    value="{{ old('email') }}">
+            </div>
+
+            <div class="form-group">
+                <label for="password">Senha:</label>
+                <input type="password" name="password" id="password" placeholder="Digite sua senha">
+            </div>
+
+            <button type="submit">Entrar</button>
+
+            @if (session('status'))
+                <p style="color: red;">
+                    {{ session('status') }}
+                </p>
+            @endif
+
+            @if ($errors->any())
+                @foreach ($errors->all() as $error)
+                    <p style="color: red;">
+                        {{ $error }}
+                    </p>
+                @endforeach
+            @endif
+        </form>
+
+        <p>Não tem uma conta? <a href="{{ route('register') }}">Cadastre-se</a></p>
+    </div>
 </body>
 
 </html>

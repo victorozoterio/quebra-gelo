@@ -7,10 +7,17 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Quebra Gelo</title>
     <link rel="icon" href="{{ asset('favicon.ico') }}">
+    <link rel="stylesheet" href="{{ asset('css/login.css') }}">
 </head>
 
 <body>
-    <h2>Login</h2>
+
+    <div class="logo">
+        <img src="{{ asset('img/logo.png') }}" alt="Logo">
+    </div>
+    <div class="container">
+    <h2 style="text-align: center;">Login</h2>
+
 
     <form action="{{ route('login.authenticate') }}" method="POST">
         @csrf
